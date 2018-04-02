@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jimmy Fagerholm</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+ <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="{% url 'home' %}">Jimmy Fagerholm</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/faagerholm/">Github</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% static 'CV.pdf' %}">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Hello, I'm Jimmy</h1>
+          <p class="lead text-muted">My name is Jimmy Fagerholm and I study computer engineering for the 2nd year at Åbo Akademi University in Turku, Finland. This is my first website that I am making in django. This website will hold some of my work and my resume.<p>
+            <a href="mailto:fagerholm.jimmy@gmail.com" class="btn btn-primary my-2">Email Me</a>
+          </p>
+            <img src="{% static 'profile-picture.jpg' %}" height="300">
+        </div>
+      </section>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+        {% for job in jobs %}
+              <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="{{ job.image.url }}"data-holder-rendered="true">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="card-body">
+                          <p class="card-text">{{ job.summary }}</p>
+                      </div>
+                  </div>
+              </div>
+              </div>
+
+        {% endfor %}
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container text-center">
+        <p> &copy; Jimmy Fagerholm {% now "Y" %}</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="288" height="225" viewBox="0 0 288 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="14" style="font-weight:bold;font-size:14pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg>
+  </body>
+</html>

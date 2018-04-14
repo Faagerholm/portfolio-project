@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/jobs/vendor/ionicons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/jobs/vendor/ionicons.min.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/jobs/style.css' %}" type="text/css">
+    <title>Jimmy Fagerholm</title>
+</head>
+<body>
+    <header class="header">
+            <nav class="main-nav">
+                <h3 class="main-nav-logo">Faagerholm</h3>
+                    <ul>
+                        <li><a href="https://github.com/faagerholm/">GitHub</a></li>
+                        <li><a href="{% static 'CV.pdf' %}">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+            </nav>
+            <div class="hero-text-box">
+                <h1 class="hero-text">
+                    <span class="hero-text-main">Welcome</span>
+                    <span class="hero-text-sub">inspire yourself</span>
+                </h1>
+            </div>
+    </header>
+    <section class="section-summary">
+        <h2><span class="h2-main">Summary</span><span class="h2-sub">About me and what I like</span></h2>
+        <div class="section-summary-wrapper">
+            <img src="{% static 'profile-picture.jpg' %}" class="summary-picture">
+            <p class="summary"> My name is Jimmy Fagerholm and I am a computer and software enthusiast who is
+                                eager to learn new things. I am on my second year studying computer engineering at Åbo Akademi University. I like small challenges, therefor I made this site.
+                                Prior to this I had no experience with python nor HTML or CSS.
+                                In my spare time, I do Crossfit and other sports related to that sport.<br><br>
+                                In Spring 2018 I have taken on learning HTML and CSS to make my own websites.
+                                The outcome is this website.
+            </p>
+        </div>
+            <a href="{% static 'CV.pdf' %}" class="cv-btn">Resume</a>
+    </section>
+    <section class="section-main">
+        <h2><span class="h2-main">recent</span><span class="h2-sub">jobs and achievements</span></h2>
+        <section class="section-jobs">
+            {% for job in jobs %}
+                <div class="box">
+                    <img src="{{ job.image.url }}">
+                    <p>{{ job.pretty_date }} - {{ job.title }}</p>
+                 </div>
+            {% endfor %}
+        </section>
+    </section>
+    <footer>
+        <div class="footer-nav">
+            <ul class="footer-social">
+                <li><a><i class="fab fa-github"></i></a></li>
+                <li><a><i class="fab fa-linkedin"></i></a></li>
+                <li><a><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-text-box">
+            <h4 class="footer-logo">Faagerholm</h4>
+            <p>made with django 2.0</p>
+            <p>&copy; Jimmy Fagerholm {% now "Y" %}</p>
+        </div>
+    </footer>
+</body>
+</html>

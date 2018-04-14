@@ -7,10 +7,12 @@
 
 }
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
@@ -23,6 +25,7 @@ body {
     line-height: 1.7;
     color: #444444;
     padding: 3rem;
+    box-sizing: border-box;
 }
 
 
@@ -133,10 +136,6 @@ h2{
     margin-top: 10rem;
     height: 80vh;
 }
-p.summary {
-    font-size: 1.5rem;
-    padding: 5rem 5rem;
-}
 .section-summary-wrapper{
     padding: 3rem;
     margin-top: 5rem;
@@ -144,9 +143,13 @@ p.summary {
     grid-gap: 2rem;
     grid-template-columns: 1fr 1fr;
 }
+.section-summary p{
+    font-size: 1.5rem;
+    text-space: 1.7rem;
+}
 .summary-picture {
-    height: 40rem;
-    width: auto;
+    width: 80%;
+    height: auto;
     margin-left: 4rem;
     box-shadow: 1rem 1rem 1rem black;
 }
@@ -190,7 +193,7 @@ p.summary {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
-    padding-bottom: 1.5;
+    padding-bottom: 1.5rem;
     border-bottom: 0.1rem solid #000;
 }
 
@@ -254,3 +257,85 @@ footer {
     font-size: 2rem;
     font-weight: 400;
 }
+
+/* --------------------- Media querries --------------------- */
+
+@media screen and (max-width: 800px){
+
+    body {
+        padding: 0;
+    }
+    .section-summary {
+        height: auto;
+    }
+    .section-main {
+        height: auto;
+    }
+    .section-summary-wrapper{
+        padding: 3rem;
+        margin-top: 5rem;
+        display: block;
+        grid-gap: 2rem;
+    }
+    .section-summary p {
+        margin-top: 2rem;
+    }
+
+    .box {
+        margin: 5rem 5rem 0 5rem;
+    }
+    .box img {
+        display: block;
+        width: auto;
+    }
+    .box p {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    html{
+        font-size: 40%;
+    }
+    .main-nav-logo {
+        margin: 2rem 0 0 5rem;
+        font-size: 6rem;
+    }
+    .main-nav ul {
+        opacity: 0;
+    }
+    .section-summary p {
+        font-size: 2rem;
+    }
+    .section-jobs {
+        display: block;
+    }
+    .box p {
+        font-size: 2rem;
+    }
+    .box:last-child{
+        margin-bottom: 10rem;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+
+    .section-summary{
+        margin: auto 3rem auto 3rem;
+    }
+    .hero-text-main{
+        letter-spacing: 2rem;
+    }
+    .h2-main {
+        letter-spacing: 2rem;
+    }
+    .h2-sub {
+        letter-spacing: 1.8rem;
+    }
+    .box {
+        margin: 5rem auto auto auto;
+    }
+}
+

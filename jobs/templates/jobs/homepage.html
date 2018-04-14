@@ -26,19 +26,23 @@
             <div class="hero-text-box">
                 <h1 class="hero-text">
                     <span class="hero-text-main">Welcome</span>
-                    <span class="hero-text-sub">inspire someone</span>
+                    <span class="hero-text-sub">inspire yourself</span>
                 </h1>
             </div>
     </header>
     <section class="section-summary">
-
         <h2><span class="h2-main">Summary</span><span class="h2-sub">About me and what I like</span></h2>
-        <p class="summary"> My name is Jimmy Fagerholm and I am a computer and software enthusiast who is
-                            eager to learn new things. I like to solve problems and I am open to new challenges.
-                            In my spare time, I do Crossfit and other sports related to that sport.<br>
-                            In Spring 2018 I have taken on learning HTML and CSS to make my own websites.
-        </p>
-        <a href="{% static 'CV.pdf' %}" class="cv-btn">Read more</a>
+        <div class="section-summary-wrapper">
+            <img src="{% static 'profile-picture.jpg' %}" class="summary-picture">
+            <p class="summary"> My name is Jimmy Fagerholm and I am a computer and software enthusiast who is
+                                eager to learn new things. I am on my second year studying computer engineering at Åbo Akademi University. I like small challenges, therefor I made this site.
+                                Prior to this I had no experience with python nor HTML or CSS.
+                                In my spare time, I do Crossfit and other sports related to that sport.<br><br>
+                                In Spring 2018 I have taken on learning HTML and CSS to make my own websites.
+                                The outcome is this website.
+            </p>
+        </div>
+            <a href="{% static 'CV.pdf' %}" class="cv-btn">Resume</a>
     </section>
     <section class="section-main">
         <h2><span class="h2-main">recent</span><span class="h2-sub">jobs and achievements</span></h2>
@@ -61,6 +65,7 @@
         </div>
         <div class="footer-text-box">
             <h4 class="footer-logo">Faagerholm</h4>
+            <p>made with django 2.0</p>
             <p>&copy; Jimmy Fagerholm {% now "Y" %}</p>
         </div>
     </footer>

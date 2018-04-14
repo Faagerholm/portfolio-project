@@ -13,13 +13,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #444444;
-    padding: 30px;
+    padding: 3rem;
 }
 
 
@@ -32,21 +35,21 @@ h2{
     text-align: center;
     color: black;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 400;
 }
 
 .h2-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 }
 .h2-sub {
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 21px;
+    letter-spacing: 2.1rem;
 }
 
 /* --------------------- Header Section --------------------- */
@@ -60,23 +63,23 @@ h2{
 }
 
 .main-nav-logo{
-    padding-left: 20px;
+    padding-left: 2rem;
     display: inline-block;
     font-family: 'Pacifico', cursive;
     color: white;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
 }
 
 .main-nav ul{
     list-style: none;
     float: right;
-    padding: 10px 50px;
+    padding: 1rem 5rem;
 }
 .main-nav li {
     font-size: 200%;
     display: inline-block;
-    padding-left: 30px;
+    padding-left: 3rem;
 }
 .main-nav a {
     transition: color 0.3s;
@@ -100,37 +103,52 @@ h2{
 
 .hero-text-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 2s;
 }
 .hero-text-sub {
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 21px;
+    letter-spacing: 2.1rem;
     animation: moveInRight 2s;
 }
 
 /* --------------------- Summary Section --------------------- */
 
 .cv-btn {
+    margin-top: 2rem;
     display: inline-block;
     color: var(--darkgreen);
-    font-size: 18px;
-    padding: 10px 25px;
-    border-radius: 25px;
+    font-size: 1.8rem;
+    padding: 1rem 2.5rem;
+    border-radius: 2.5rem;
     border: 1px solid var(--darkgreen);
 }
 .section-summary {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10rem;
     height: 80vh;
 }
 p.summary {
-    padding: 100px 150px;
+    font-size: 1.5rem;
+    padding: 5rem 5rem;
+}
+.section-summary-wrapper{
+    padding: 3rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+.summary-picture {
+    height: 40rem;
+    width: auto;
+    margin-left: 4rem;
+    box-shadow: 1rem 1rem 1rem black;
 }
 
 /* --------------------- main & jobs section --------------------- */
@@ -144,23 +162,23 @@ p.summary {
 .section-main {
     background-color: #eaeaea;
     height: 90vh;
-    margin: 200px 0 0 0;
-    padding: 50px 0;
+    margin: 20rem 0 0 0;
+    padding: 5rem 0;
 }
 .section-jobs {
-    margin: 50px 30px;
+    margin: 5rem 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 1rem;
     justify-content: space-evenly;
 }
 .box {
     background-color: white;
-    margin: 5px 5px;
+    margin: .5rem .5rem;
     color: #000;
-    border: 3px solid #9a9a9a;
-    border-radius: 20px;
-    padding: 20px 20px;
+    border: .3rem solid #9a9a9a;
+    border-radius: 2rem;
+    padding: 2rem 2rem;
     transition: background-color 0.5s;
 }
 .box:hover {
@@ -168,12 +186,12 @@ p.summary {
 }
 .box img {
     display: block;
-    height: 200px;
+    height: 20rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #000;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5;
+    border-bottom: 0.1rem solid #000;
 }
 
 .box p {
@@ -185,7 +203,7 @@ p.summary {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     100% {
         opacity: 1;
@@ -197,26 +215,17 @@ p.summary {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     100% {
         opacity: 1;
         transform: translate(0);
     }
-
-}
-.footer-logo{
-    padding-left: 20px;
-    display: inline-block;
-    font-family: 'Pacifico', cursive;
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
 }
 /* --------------------- Footer --------------------- */
 
 footer {
-    padding-top: 40px;
+    padding-top: 4rem;
 }
 
 .footer-nav {
@@ -229,37 +238,19 @@ footer {
 }
 .footer-nav li {
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 1rem;
 }
 .footer-nav i{
-    font-size: 30px;
+    font-size: 3rem;
     color: black;
 }
-.footer-text-box {
-    text-align: center;
+.footer-text-box{
+    font-size: 1.5rem;
+    padding-left: 2rem;
 }
-/* --------------------- Media queries --------------------- */
-
-@media only screen and (max-width: 1400px) {
-    .section-jobs {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width: 1050px) {
-    .section-jobs {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width: 1050px) {
-    .section-jobs {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width: 740px) {
-    .section-jobs {
-        grid-template-columns: 1fr;
-    }
+.footer-logo{
+    font-family: 'Pacifico', cursive;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
 }

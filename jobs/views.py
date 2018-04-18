@@ -4,4 +4,5 @@ from .models import Job
 
 def home(request):
     jobs = Job.objects.all()
+
     return render(request, 'jobs/homepage.html', {'jobs': jobs})

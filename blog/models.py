@@ -21,8 +21,8 @@ class Blog(models.Model):
 class Comment(models.Model):
     user = models.CharField(max_length=50)
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    comment = models.TextField(max_length=400)
-    time = models.DateTimeField(default=timezone.now)
+    text = models.TextField(max_length=400)
+    pub_date = models.DateTimeField(default=timezone.now)
 
     def pub_date_short(self):
-        return self.time.strftime('%b %e %Y')
+        return self.pub_date.strftime('%b %e %Y')

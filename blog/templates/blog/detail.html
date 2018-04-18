@@ -40,6 +40,12 @@
              <p class="text-center">{{ blog.pub_date_short }}</p>
              <a href="allblogs.html">Back</a>
              <hr>
+             {% for comment in comments %}
+                 {{ comment.user }}
+                 &vartriangleright; {{ comment.text }}
+                 &vartriangleright; {{ comment.pub_date }}
+                 <br>
+             {% endfor %}
         </div>
     </main>
     <footer class="text-muted">

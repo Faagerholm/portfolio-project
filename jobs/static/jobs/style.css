@@ -122,15 +122,6 @@ h2{
 
 /* --------------------- Summary Section --------------------- */
 
-.cv-btn {
-    margin-top: 2rem;
-    display: inline-block;
-    color: var(--darkgreen);
-    font-size: 1.8rem;
-    padding: 1rem 2.5rem;
-    border-radius: 2.5rem;
-    border: 1px solid var(--darkgreen);
-}
 .section-summary {
     text-align: center;
     margin-top: 10rem;
@@ -146,6 +137,16 @@ h2{
 .section-summary p{
     font-size: 1.5rem;
     text-space: 1.7rem;
+}
+.cv-btn {
+    width: 200px;
+    margin-top: 2rem;
+    display: inline-block;
+    color: var(--darkgreen);
+    font-size: 1.8rem;
+    padding: 1rem 2.5rem;
+    border-radius: 2.5rem;
+    border: 1px solid var(--darkgreen);
 }
 .summary-picture {
     width: 80%;

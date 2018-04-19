@@ -9,11 +9,11 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
- <body>
+</head>
+<body>
      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="{% url 'home' %}">Jimmy Fagerholm</a>
+          <a class="navbar-brand" href="{% url 'home' %}">Faagerholm</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,13 +32,13 @@
           </div>
         </nav>
     </header>
-     <main>
+    <main>
          <div class="container">
              <h1 class="text-center pt-3">{{ blog.title }}</h1>
              <img class="flex-fluid" src="{{ blog.image.url }}">
              <p>{{ blog.summary }}</p>
              <p class="text-center">{{ blog.pub_date_short }}</p>
-             <a href="allblogs.html">Back</a>
+             <a href="{% url 'allblogs' %}">Back</a>
              <hr>
              {% for comment in comments %}
                  {{ comment.user }}
